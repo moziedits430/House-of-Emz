@@ -32,3 +32,40 @@ a{
 a:hover{
    color: var(--primary);
 }
+
+.hero {
+    text-align: center;
+    padding: 150px;
+    font-size: 100%;
+}
+
+.hero > h1 {
+    font-family: "Lavishly Yours", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 100px;
+}
+
+button {
+    border-radius: 15px;
+    width: 160px;
+    height: 45px;
+    padding: 10px;
+    margin: 30px 0px 3px 0px;/*trbl*/ 
+}
+
+.order-now {
+    color: white;
+    background: var(--secondary);
+    border: none;
+}
+ .order-now:hover {
+    color: black;
+    background: white;
+ }
+
+.collection {
+    color: var(--secondary);
+    background: black;
+    border: 1px solid var(--secondary);
+}
