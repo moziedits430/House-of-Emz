@@ -34,6 +34,7 @@ a:hover{
 }
 
 .hero {
+    background: var(--footer);
     text-align: center;
     padding: 150px;
     font-size: 100%;
@@ -68,4 +69,60 @@ button {
     color: var(--secondary);
     background: black;
     border: 1px solid var(--secondary);
+}
+
+.featured-collection {
+    padding: 64px 5vw;
+    background: var(--background);
+}
+
+.featured-collection h1 {
+    color: var(--secondary);
+    margin-bottom: 24px;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 24px;
+}
+
+.product {
+    background: var(--footer);
+    border-radius: 22px;
+    overflow: hidden;
+}
+.product img {
+    width: 100%;
+    aspect-ratio: 3/4;
+    object-fit: cover;
+}
+
+.product-information {
+    padding: 14px 16px 18px;
+}
+
+.product-information p {
+    color: #6b6262;
+    font-size: 14px;
+}
+
+.product-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 12px;
+}
+
+.price {
+    color: var(--secondary);
+    font-weight: 500;
+}
+
+.add-to-bag {
+    width: auto;
+    padding: 8px 14px;
+    color: var(--secondary);
+    background: transparent;
+    border: 1.5px solid var(--secondary);
 }
