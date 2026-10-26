@@ -10,6 +10,7 @@ body {
     --text: #2B2B2B;
     --background: #fbf7f5;
     --footer: #f3e4e4;
+    font-family: "Jost", Arial, sans-serif;
     background-color: var(--background);
 }
 
@@ -34,7 +35,7 @@ a:hover{
 }
 
 .hero {
-    background: var(--footer);
+    background: linear-gradient(45deg, var(--footer), var(--primary));
     text-align: center;
     padding: 150px;
     font-size: 100%;
@@ -125,4 +126,122 @@ button {
     color: var(--secondary);
     background: transparent;
     border: 1.5px solid var(--secondary);
+}
+
+.add-to-bag:hover {
+    color: var(--text);
+    background: var(--background);
+    cursor: pointer;
+}
+
+.about {
+    padding: 64px 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    background: var(--primary);
+}
+
+.about-image {
+    aspect-ratio: 1/1;
+    border-radius: 11px;
+    overflow: hidden;
+}
+
+.our-story {
+    text-align: left;
+    
+}
+
+.our-story span {
+    font-family: "Lavishly Yours", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 60px;
+}
+
+.our-story p {
+    font-family: "Jost", Arial, sans-serif;
+    font-size: 20px;
+    width: 60%;
+}
+
+.about-us {
+    color: white;
+    background: var(--secondary);
+    border: none;
+
+}
+.about-us:hover {
+    cursor: pointer;
+    color: black;
+    background: white;
+ }
+
+ .features {
+    font-size: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 100px;
+    margin: 40px;
+ }
+ .feature {
+    background: var(--primary);
+    text-align: center;
+    border: 2px solid var(--secondary);
+    border-radius: 10px;
+ }
+ 
+ .footer {
+    background: var(--secondary);
+    color: white;
+    padding: 48px 5vw 24px;
+ }
+
+ .footer-top {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 32px;
+}
+
+.footer-brand {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-brand p {
+    max-width: 250px;
+    opacity: 0.85;
+}
+
+.footer-column {
+   display: flex;
+   flex-direction: column;
+   gap: 8px; 
+}
+
+.footer-column h4 {
+    margin-bottom: 4px;
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+    opacity: 0.85;
+}
+
+.footer a:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    margin-top: 32px;
+    padding-top: 16px;
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+    text-align: center;
+    font-size: 14px;
+    opacity: 0.8;
 }
