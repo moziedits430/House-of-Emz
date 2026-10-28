@@ -23,13 +23,207 @@ header {
     justify-content: space-between;
 }
 
-a{
+header a{
     color: var(--background);
     text-decoration: none;
     font-size: 20px;
     margin: 10px;
 }
 
-a:hover{
+a {
+    text-decoration: none;
+}
+
+header a:hover{
    color: var(--primary);
+}
+
+.product {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    padding: 32px 64px;
+    align-items: flex-start;
+}
+
+.product-image {
+    flex: 1;
+    max-width: 550px;
+}
+
+.product-image img {
+    width: 100%;
+    display: block;
+}
+
+.product-image img {
+    width: 100%;
+    display: block;
+}
+
+.thumbnails {
+    display: flex;
+    gap: 12px;
+    margin-top: 12px;
+}
+
+.thumbnails img {
+    width: 80px;
+}
+
+.product-description {
+    flex: 1;
+    max-width: 550px;
+}
+
+.product-description h2 {
+    font-size: 40px;
+    font-family: 'Times New Roman', Times, serif;
+    color: var(--primary);
+}
+
+.sizes {
+    display: flex;
+    gap: 12px;
+    margin-top: 12px;
+}
+
+.sizes p {
+    border: 1px solid var(--secondary);
+    padding: 20px;
+}
+
+.sizes p:hover {
+    color: var(--text);
+    background: var(--secondary);
+    cursor: pointer;
+}
+
+.sizes p:active {
+    color: var(--text);
+    background: var(--secondary);
+    cursor: pointer;
+}
+
+button {
+    margin-top: 20px;
+    width: 100%;
+    padding: 20px 40px;
+    border: none;
+    justify-content: center;
+    background: var(--footer);
+}
+
+button:hover {
+    background: var(--background);
+    color: var(--secondary);
+}
+
+.description {
+    margin-top: 20px;
+    font-size: 15px;
+}
+
+.description h4 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+}
+
+.you-may-like {
+    padding: 64px 5vw;
+    background: var(--secondary);
+}
+
+.more-info {
+    margin-top: 24px;
+    gap: 20px;
+}
+
+.more-info p {
+    margin: 0 0 12px 0;
+}
+
+.designs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+}
+
+.design {
+    background: var(--footer);
+    border-radius: 22px;
+    overflow: hidden;
+}
+
+.design img {
+    width: 100%;
+    aspect-ratio: 3/4;
+    object-fit: cover;
+}
+
+.design-info {
+    padding: 14px 16px 18px;
+    color: var(--primary);
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    margin-top: 12px;
+}
+
+.design-info p {
+    color: #6b6262;
+    font-size: 14px;
+}
+
+.footer {
+    background: var(--footer);
+    color: var(--text);
+    padding: 48px 5vw 24px;
+ }
+
+ .footer-top {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 32px;
+}
+
+.footer-brand {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-brand p {
+    max-width: 250px;
+    opacity: 0.85;
+}
+
+.footer-column {
+   display: flex;
+   flex-direction: column;
+   gap: 8px; 
+}
+
+.footer-column h4 {
+    margin-bottom: 4px;
+}
+
+.footer a {
+    color: var(--text);
+    text-decoration: none;
+    opacity: 0.85;
+}
+
+.footer a:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    margin-top: 32px;
+    padding-top: 16px;
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+    text-align: center;
+    font-size: 14px;
+    opacity: 0.8;
 }
