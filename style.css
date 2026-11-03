@@ -89,6 +89,10 @@ button {
 }
 
 .product {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
     background: var(--footer);
     border-radius: 22px;
     overflow: hidden;
@@ -100,19 +104,32 @@ button {
 }
 
 .product-information {
+    display: flex;
+    flex-direction: column;
+    flex: 1;                 /* fills the remaining card height */
     padding: 14px 16px 18px;
 }
 
+.product-information h1 {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+}
 .product-information p {
     color: #6b6262;
     font-size: 14px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /*This for long text in the description meaning that it will show only 3 lines and the rest it's just dots*/
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 .product-row {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 12px;
+    margin-top: auto; /*Pushes price + button to the bottom*/
+    padding-top: 12px;
 }
 
 .price {
