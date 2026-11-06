@@ -19,7 +19,7 @@ const products = [
     },
     {
         id: 2,
-        name: "Burgundy & African Print Maxi Dress",
+        name: "African Print Maxi Dress",
         price: 2000,
         image: "Images/Design2.jpeg",
         description: "Make a statement with this elegant, figure-flattering maxi dress, beautifully designed with a rich burgundy bodice and a striking black-and-white African-inspired print accented with subtle red details."
@@ -44,5 +44,7 @@ const products = [
 //This is one way but I need to do the simple one using of
 
 for (const product of products){
-    console.log(`${product.names} - KES ${product.price}`);
+    console.log(`${product.name} - KES ${product.price * 2}`);
 }
+
+//So by adding *2 we are able to multiply the price value
