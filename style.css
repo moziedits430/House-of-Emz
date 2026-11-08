@@ -68,7 +68,7 @@ button {
 
 .collection {
     color: var(--secondary);
-    background: black;
+    background: transparent;
     border: 1px solid var(--secondary);
 }
 
@@ -199,7 +199,7 @@ button {
  .features {
     font-size: 20px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 100px;
     margin: 40px;
  }
@@ -262,3 +262,81 @@ button {
     font-size: 14px;
     opacity: 0.8;
 }
+
+/* ---------- Tablet ---------- */
+@media (max-width: 768px) {
+
+    /* Header: allow items to wrap and shrink the links */
+    header {
+        flex-wrap: wrap;
+        gap: 8px;
+        justify-content: center;
+    }
+
+    a {
+        font-size: 16px;
+        margin: 6px;
+    }
+
+    /* Hero: 150px padding and a 100px title are too big for tablets */
+    .hero {
+        padding: 80px 24px;
+    }
+
+    .hero > h1 {
+        font-size: 64px;
+    }
+
+    /* About: stack the image above the text */
+    .about {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .our-story {
+        text-align: center;
+    }
+
+    .our-story p {
+        width: 100%;
+    }
+
+    /* Features: smaller gap and margin */
+    .features {
+        gap: 24px;
+        margin: 24px;
+    }
+
+    /* Footer: 4 columns becomes 2 */
+    .footer-top {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* ---------- Phone ---------- */
+@media (max-width: 480px) {
+    .hero > h1 {
+        font-size: 48px;
+    }
+
+    .footer-top {
+        grid-template-columns: 1fr;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    .about {
+        flex-direction: column;
+        padding: 32px 5vw;
+    }
+
+    .about-image {
+        max-width: 280px;
+        margin: 0 auto;
+    }
+}
+
+.about-image { width: min(350px, 100%); }
+.about-image img { width: 100%; height: 100%; object-fit: cover; }

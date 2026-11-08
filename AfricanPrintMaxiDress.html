@@ -8,7 +8,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Festive&family=Imperial+Script&family=Lavishly+Yours&family=Monsieur+La+Doulaise&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -18,25 +17,33 @@
 
         <div class="menu">
             <a href="index.html">Home</a>
-            <a href="">Shop</a>
-            <a href="">About</a>
-            <a href="">Contact us</a>
+            <a href="#">Shop</a>
+            <a href="#">About</a>
+            <a href="#">Contact us</a>
         </div>
 
         <div class="side_bar">
-            <a href="">Sign up/Log in</a>
-            <a href="">Bag</a>
+            <a href="#">Sign up/Log in</a>
+            <a href="#">Bag</a>
         </div>
     </header>
 
     <div class="product">
         <div class="product-image">
-            <img id="main-photo" src="Images/Design2.jpeg" alt="an image of burgundy & African print maxi dress">
+            <img id="main-photo" src="Images/Design2.jpeg" alt="Burgundy and African print maxi dress">
             <div class="thumbnails">
                 <img src="Images/Design2.jpeg" alt="Front view">
                 <img src="Images/Design2_SideView.jpg" alt="Side view">
                 <img src="Images/Design2_CloseUp.jpg" alt="">
                 <img src="Images/Designe2_YoungerAge.jpg" alt=""> 
+            </div>
+
+            <!--Mobile responsive-->
+            <div class="gallery">
+                <img src="Images/Design2.jpeg" alt="Front view">
+                <img src="Images/Design2_SideView.jpg" alt="Side view" loading="lazy">
+                <img src="Images/Design2_CloseUp.jpg" alt="Close up" loading="lazy">
+                <img src="Images/Designe2_YoungerAge.jpg" alt="Another view" loading="lazy">    
             </div>
             
         </div>
@@ -45,13 +52,13 @@
             <p>KES 1500</p>
             <div class="sizes">
                 <p>S</p>
-                <P>M</P>
+                <p>M</p>
                 <p>L</p>
                 <p>XL</p>
-                <P>XXL</P>
+                <p>XXL</p>
             </div>
             <div class="button">
-                <button class="add-to-bag" id="1">ADD TO BAG</button>
+                <button class="add-to-bag" data-id="2">ADD TO BAG</button>
             </div>
             <div class="description">
                 <h4>Description</h4>
@@ -80,7 +87,7 @@
                     <img src="Images/Design1.jpg" alt="">
                     <div class="design-info">
                         <h1>Dusty rose gown</h1>
-                            <p>KES 200</p>  
+                            <p>KES 2000</p>  
                     </div>
                 </div>
             </a>
@@ -95,7 +102,7 @@
                 </div>
             </a>
 
-            <a href="">
+            <a href="The_cozy_Muse.html">
                 <div class="design">
                     <img src="Images/Design4.jpg" alt="">
                     <div class="design-info">
@@ -122,29 +129,29 @@
         <div class="footer-top">
 
             <div class="footer-brand">
-                <img width="40" src="Images/EMZ_logo.svg" alt="A logo od EMZ">
+                <img width="40" src="Images/EMZ_logo.svg" alt="A logo of EMZ">
                 <p>Designed to be worn, made to be remembered.</p>
             </div>
 
             <div class="footer-column">
                 <h4>Shop</h4>
-                <a href="">New in</a>
-                <a href="">Collections</a>
-                <a href="">Bag</a>
+                <a href="#">New in</a>
+                <a href="#">Collections</a>
+                <a href="#">Bag</a>
             </div>
 
             <div class="footer-column">
                 <h4>Company</h4>
-                <a href="">About</a>
-                <a href="">Contact us</a>
-                <a href="">Sign up/ Log in</a>
+                <a href="#">About</a>
+                <a href="#">Contact us</a>
+                <a href="#">Sign up/ Log in</a>
             </div>
 
             <div class="footer-column">
                 <h4>Follow</h4>
-                <a href="">Instagram</a>
-                <a href="">Tiktok</a>
-                <a href="">WhatsApp</a>
+                <a href="#">Instagram</a>
+                <a href="#">Tiktok</a>
+                <a href="#">WhatsApp</a>
             </div>
         </div>
 
@@ -153,6 +160,5 @@
         </div>
     </footer>
     <script src="script.js"></script>
-</body>
 </body>
 </html>

@@ -1,7 +1,16 @@
+/* =========================================================
+   BASE (desktop first)
+   ========================================================= */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 body {
@@ -14,6 +23,11 @@ body {
     background-color: var(--background);
 }
 
+a {
+    text-decoration: none;
+}
+
+/* ---------- Header ---------- */
 header {
     display: flex;
     background: var(--secondary);
@@ -23,21 +37,17 @@ header {
     justify-content: space-between;
 }
 
-header a{
+header a {
     color: var(--background);
-    text-decoration: none;
     font-size: 20px;
     margin: 10px;
 }
 
-a {
-    text-decoration: none;
+header a:hover {
+    color: var(--primary);
 }
 
-header a:hover{
-   color: var(--primary);
-}
-
+/* ---------- Product section ---------- */
 .product {
     display: flex;
     justify-content: center;
@@ -49,18 +59,16 @@ header a:hover{
 .product-image {
     flex: 1;
     max-width: 550px;
+    min-width: 0;
 }
 
-.product-image img {
-    width: 100%;
-    display: block;
+.product-description {
+    flex: 1;
+    max-width: 550px;
+    min-width: 0;
 }
 
-.product-image img {
-    width: 100%;
-    display: block;
-}
-
+/* Desktop gallery: main photo + thumbnails (click to change) */
 .thumbnails {
     display: flex;
     gap: 12px;
@@ -76,9 +84,9 @@ header a:hover{
     outline: 2px solid var(--secondary);
 }
 
-.product-description {
-    flex: 1;
-    max-width: 550px;
+/* Swipe gallery is hidden on desktop */
+.gallery {
+    display: none;
 }
 
 .product-description h2 {
@@ -98,12 +106,7 @@ header a:hover{
     padding: 20px;
 }
 
-.sizes p:hover {
-    color: var(--text);
-    background: var(--secondary);
-    cursor: pointer;
-}
-
+.sizes p:hover,
 .sizes p:active {
     color: var(--text);
     background: var(--secondary);
@@ -115,7 +118,6 @@ button {
     width: 100%;
     padding: 20px 40px;
     border: none;
-    justify-content: center;
     background: var(--footer);
 }
 
@@ -134,31 +136,37 @@ button:hover {
     font-size: 30px;
 }
 
-.you-may-like {
-    padding: 64px 5vw;
-    background: var(--secondary);
-}
-
 .more-info {
     margin-top: 24px;
-    gap: 20px;
 }
 
 .more-info p {
     margin: 0 0 12px 0;
 }
 
+/* ---------- You may also like ---------- */
+.you-may-like {
+    padding: 64px 5vw;
+    background: var(--secondary);
+}
+
 .designs {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 24px;
+    grid-template-columns: repeat(4, minmax(0, 1fr));   /* desktop: 4 per row */
+    gap: 16px;
+}
+
+.designs a {
+    display: block;
+    min-width: 0;
 }
 
 .design {
-    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    height: 100%;
     background: var(--footer);
-    border-radius: 22px;
+    border-radius: 10px;
     overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .design img {
@@ -168,12 +176,19 @@ button:hover {
 }
 
 .design-info {
-    padding: 14px 16px 18px;
+    padding: 8px 10px 12px;
     color: var(--primary);
-    text-decoration: none;
     display: flex;
     flex-direction: column;
-    margin-top: 12px;
+    gap: 2px;
+}
+
+.design-info h1 {
+    font-size: 15px;
+    font-weight: 500;
+    white-space: nowrap;          /* one line, cut with ... like Fashion Nova */
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .design-info p {
@@ -181,13 +196,14 @@ button:hover {
     font-size: 14px;
 }
 
+/* ---------- Footer ---------- */
 .footer {
     background: var(--footer);
     color: var(--text);
     padding: 48px 5vw 24px;
- }
+}
 
- .footer-top {
+.footer-top {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr 1fr;
     gap: 32px;
@@ -205,9 +221,9 @@ button:hover {
 }
 
 .footer-column {
-   display: flex;
-   flex-direction: column;
-   gap: 8px; 
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
 
 .footer-column h4 {
@@ -216,7 +232,6 @@ button:hover {
 
 .footer a {
     color: var(--text);
-    text-decoration: none;
     opacity: 0.85;
 }
 
@@ -228,8 +243,156 @@ button:hover {
 .footer-bottom {
     margin-top: 32px;
     padding-top: 16px;
-    border-top: 1px solid rgba(255, 255, 255, 0.25);
+    border-top: 1px solid rgba(0, 0, 0, 0.15);
     text-align: center;
     font-size: 14px;
     opacity: 0.8;
+}
+
+
+/* =========================================================
+   TABLET + PHONE  (1024px and below)
+   Everything that should apply to BOTH goes here.
+   ========================================================= */
+@media (max-width: 1024px) {
+
+    header {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    header a {
+        font-size: 16px;
+        margin: 6px;
+    }
+
+    /* Images on top, information below */
+    .product {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 24px;
+        padding: 16px 5vw 32px;
+    }
+
+    .product-image,
+    .product-description {
+        flex: none;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* Hide the click version */
+    #main-photo,
+    .thumbnails {
+        display: none;
+    }
+
+    /* Show the swipe version */
+    .gallery {
+        display: flex;
+        gap: 4px;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+    }
+
+    .gallery::-webkit-scrollbar {
+        display: none;
+    }
+
+    .gallery img {
+        flex: 0 0 85%;              /* phone default: one image + a peek of the next */
+        scroll-snap-align: start;
+        aspect-ratio: 3 / 4;
+        object-fit: cover;
+    }
+
+    .product-description h2 {
+        font-size: 32px;
+    }
+
+    .you-may-like {
+        padding: 40px 5vw;
+    }
+
+    .designs {
+        grid-template-columns: repeat(3, minmax(0, 1fr));   /* tablet: 3 per row */
+        gap: 12px;
+    }
+
+    .footer-top {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+/* =========================================================
+   TABLET ONLY (481px - 1024px): about 1.5 images visible
+   ========================================================= */
+@media (min-width: 481px) and (max-width: 1024px) {
+
+    .gallery img {
+        flex: 0 0 48%;
+    }
+}
+
+
+/* =========================================================
+   SMALL PHONES (480px and below): tweaks only
+   ========================================================= */
+@media (max-width: 480px) {
+
+    .product-description h2 {
+        font-size: 26px;
+    }
+
+    .sizes {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .sizes p {
+        padding: 12px 16px;
+    }
+
+    button {
+        padding: 16px 20px;
+    }
+
+    .description h4 {
+        font-size: 24px;
+    }
+
+    .designs {
+        grid-template-columns: repeat(2, minmax(0, 1fr));   /* phone: 2 per row */
+        gap: 8px;
+    }
+
+    .design-info h1 {
+        font-size: 13px;
+    }
+
+    .design-info p {
+        font-size: 13px;
+    }
+
+    .footer-top {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ---------- Fixes ---------- */
+.sizes p:hover,
+.sizes p.selected {
+    color: var(--background);
+    background: var(--secondary);
+    cursor: pointer;
+}
+
+.you-may-like > h1 {
+    color: var(--background);
+    margin-bottom: 24px;
 }

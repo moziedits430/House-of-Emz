@@ -48,3 +48,25 @@ for (const product of products){
 }
 
 //So by adding *2 we are able to multiply the price value
+//How to find an item in the array 
+
+const found = products.find(function (product){
+    return product.id === 2;
+});
+
+console.log(found.name);
+
+//We need to create a bag where all the users products items will be stored
+
+const order = []
+const buttons = document.querySelectorAll("add-to-bag");
+//But there is a problem in my html code there is a link before the order button
+
+buttons.forEach(function (button){
+    button.addEventListener("click", function(event){
+        event.preventDefault();
+        //Get the if from the button
+        const item = button.document.querySelector("#1");
+        console.log()
+    })
+})
